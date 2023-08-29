@@ -1,16 +1,21 @@
 {
   "files": {
-    "main.css": "/bream-listen/static/css/main.073c9b0a.css",
-    "main.js": "/bream-listen/static/js/main.7c7269f0.js",
+    "main.css": "/bream-listen/static/css/main.d0b28579.css",
+    "main.js": "/bream-listen/static/js/main.450997e5.js",
     "static/js/787.13688510.chunk.js": "/bream-listen/static/js/787.13688510.chunk.js",
-    "static/media/logo.svg": "/bream-listen/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/Bruno Mars - Chunky (Official Audio).mp3": "/bream-listen/static/media/Bruno Mars - Chunky (Official Audio).677b425c03eb8f79fc2a.mp3",
+    "static/media/Bruno Mars - Chunky (Official Audio)1.mp3": "/bream-listen/static/media/Bruno Mars - Chunky (Official Audio)1.677b425c03eb8f79fc2a.mp3",
+    "static/media/Bruno Mars - Chunky (Official Audio)2.mp3": "/bream-listen/static/media/Bruno Mars - Chunky (Official Audio)2.677b425c03eb8f79fc2a.mp3",
+    "static/media/test drive2 (copy).mp3": "/bream-listen/static/media/test drive2 (copy).18e61b3e28a6395b84cc.mp3",
+    "static/media/test drive2.mp3": "/bream-listen/static/media/test drive2.18e61b3e28a6395b84cc.mp3",
     "index.html": "/bream-listen/index.html",
-    "main.073c9b0a.css.map": "/bream-listen/static/css/main.073c9b0a.css.map",
-    "main.7c7269f0.js.map": "/bream-listen/static/js/main.7c7269f0.js.map",
+    "static/media/index.cjs": "/bream-listen/static/media/index.cd351d7c31d0d3fccf96.cjs",
+    "main.d0b28579.css.map": "/bream-listen/static/css/main.d0b28579.css.map",
+    "main.450997e5.js.map": "/bream-listen/static/js/main.450997e5.js.map",
     "787.13688510.chunk.js.map": "/bream-listen/static/js/787.13688510.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.7c7269f0.js"
+    "static/css/main.d0b28579.css",
+    "static/js/main.450997e5.js"
   ]
 }
