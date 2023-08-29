@@ -8,7 +8,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/bream-listen" element={Introduction} />
+        <Route path="/bream_listen" element={Introduction} />
         <Route path="/listening" element={ListeningTest} />
         <Route path="/thankyou" element={ThankYou} />
       </Routes>
