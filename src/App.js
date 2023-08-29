@@ -8,9 +8,9 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/bream_listening" element={Introduction} />
-        <Route path="/bream_listening/listening" element={ListeningTest} />
-        <Route path="/bream_listening/thankyou" element={ThankYou} />
+        <Route path="/bream_listen" element={Introduction} />
+        <Route path="/bream_listen/listening" element={ListeningTest} />
+        <Route path="/bream_listen/thankyou" element={ThankYou} />
       </Routes>
     </Router>
   );

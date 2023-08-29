@@ -1,7 +1,7 @@
 {
   "name": "bream_listening",
   "version": "0.1.0",
-  "homepage": "https://pliploop.github.io/bream_listening",
+  "homepage": "https://pliploop.github.io/bream_listen",
   "private": false,
   "dependencies": {
     "@supabase/supabase-js": "^2.33.1",

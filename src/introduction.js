@@ -72,7 +72,7 @@ const Introduction = () => {
       <div className="flex justify-center flex-col items-center  w-1/2">
       <img src={sonycsl} alt="SonyCSL"/>
       <Link
-        to="/bream_listening/listening"
+        to="/bream_listen/listening"
         disabled={isAnyAnswerEmpty}
         className={`text-white font-bold px-20 py-4 rounded-full text-xl bg-blue-600 border-blue-900 border-[1px] shadow-sm hover:shadow-lg mt-10 hover:bg-blue-700 active:scale-95 transition-all duration-75 shadow-black ${
           isAnyAnswerEmpty ? '' : 'opacity-50 cursor-not-allowed}'
