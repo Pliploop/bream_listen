@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/bream_listening/static/css/main.3383de24.css",
-    "main.js": "/bream_listening/static/js/main.254730aa.js",
+    "main.js": "/bream_listening/static/js/main.5a113f59.js",
     "static/js/787.13688510.chunk.js": "/bream_listening/static/js/787.13688510.chunk.js",
     "static/media/Bruno Mars - Chunky (Official Audio).mp3": "/bream_listening/static/media/Bruno Mars - Chunky (Official Audio).677b425c03eb8f79fc2a.mp3",
     "static/media/Bruno Mars - Chunky (Official Audio)1.mp3": "/bream_listening/static/media/Bruno Mars - Chunky (Official Audio)1.677b425c03eb8f79fc2a.mp3",
@@ -11,11 +11,11 @@
     "index.html": "/bream_listening/index.html",
     "static/media/index.cjs": "/bream_listening/static/media/index.cd351d7c31d0d3fccf96.cjs",
     "main.3383de24.css.map": "/bream_listening/static/css/main.3383de24.css.map",
-    "main.254730aa.js.map": "/bream_listening/static/js/main.254730aa.js.map",
+    "main.5a113f59.js.map": "/bream_listening/static/js/main.5a113f59.js.map",
     "787.13688510.chunk.js.map": "/bream_listening/static/js/787.13688510.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3383de24.css",
-    "static/js/main.254730aa.js"
+    "static/js/main.5a113f59.js"
   ]
 }
