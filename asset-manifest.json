@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/bream_listening/static/css/main.3383de24.css",
-    "main.js": "/bream_listening/static/js/main.5a113f59.js",
-    "static/js/787.13688510.chunk.js": "/bream_listening/static/js/787.13688510.chunk.js",
-    "static/media/Bruno Mars - Chunky (Official Audio).mp3": "/bream_listening/static/media/Bruno Mars - Chunky (Official Audio).677b425c03eb8f79fc2a.mp3",
-    "static/media/Bruno Mars - Chunky (Official Audio)1.mp3": "/bream_listening/static/media/Bruno Mars - Chunky (Official Audio)1.677b425c03eb8f79fc2a.mp3",
-    "static/media/Bruno Mars - Chunky (Official Audio)2.mp3": "/bream_listening/static/media/Bruno Mars - Chunky (Official Audio)2.677b425c03eb8f79fc2a.mp3",
-    "static/media/test drive2 (copy).mp3": "/bream_listening/static/media/test drive2 (copy).18e61b3e28a6395b84cc.mp3",
-    "static/media/test drive2.mp3": "/bream_listening/static/media/test drive2.18e61b3e28a6395b84cc.mp3",
-    "index.html": "/bream_listening/index.html",
-    "static/media/index.cjs": "/bream_listening/static/media/index.cd351d7c31d0d3fccf96.cjs",
-    "main.3383de24.css.map": "/bream_listening/static/css/main.3383de24.css.map",
-    "main.5a113f59.js.map": "/bream_listening/static/js/main.5a113f59.js.map",
-    "787.13688510.chunk.js.map": "/bream_listening/static/js/787.13688510.chunk.js.map"
+    "main.css": "/bream_listen/static/css/main.3383de24.css",
+    "main.js": "/bream_listen/static/js/main.6f4ca311.js",
+    "static/js/787.13688510.chunk.js": "/bream_listen/static/js/787.13688510.chunk.js",
+    "static/media/Bruno Mars - Chunky (Official Audio).mp3": "/bream_listen/static/media/Bruno Mars - Chunky (Official Audio).677b425c03eb8f79fc2a.mp3",
+    "static/media/Bruno Mars - Chunky (Official Audio)1.mp3": "/bream_listen/static/media/Bruno Mars - Chunky (Official Audio)1.677b425c03eb8f79fc2a.mp3",
+    "static/media/Bruno Mars - Chunky (Official Audio)2.mp3": "/bream_listen/static/media/Bruno Mars - Chunky (Official Audio)2.677b425c03eb8f79fc2a.mp3",
+    "static/media/test drive2 (copy).mp3": "/bream_listen/static/media/test drive2 (copy).18e61b3e28a6395b84cc.mp3",
+    "static/media/test drive2.mp3": "/bream_listen/static/media/test drive2.18e61b3e28a6395b84cc.mp3",
+    "index.html": "/bream_listen/index.html",
+    "static/media/index.cjs": "/bream_listen/static/media/index.cd351d7c31d0d3fccf96.cjs",
+    "main.3383de24.css.map": "/bream_listen/static/css/main.3383de24.css.map",
+    "main.6f4ca311.js.map": "/bream_listen/static/js/main.6f4ca311.js.map",
+    "787.13688510.chunk.js.map": "/bream_listen/static/js/787.13688510.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3383de24.css",
-    "static/js/main.5a113f59.js"
+    "static/js/main.6f4ca311.js"
   ]
 }
