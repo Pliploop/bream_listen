@@ -139,7 +139,7 @@ const ListeningTest = () => {
       console.log(answers)
       // answers.forEach((answer) => sendresults(answer))
       sendresultsall(answers)
-      navigate("/thankyou");
+      navigate("/bream_listen/thankyou");
     }
   };
 
