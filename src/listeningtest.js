@@ -1,10 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import { createClient } from '@supabase/supabase-js'
+import { createClient } from "@supabase/supabase-js";
 
 import WaveSurfer from "wavesurfer.js";
 import { list } from "postcss";
-import {v4 as uuidv4} from 'uuid'
+import { v4 as uuidv4 } from "uuid";
+import { AiFillFastForward, AiFillFastBackward } from "react-icons/ai";
 
 // ... Import other audio files
 
@@ -13,7 +14,7 @@ const ProgressBar = ({ currentClipIndex, totalClips }) => {
   const progressText = `Sample ${currentClipIndex + 1} / ${totalClips}`;
 
   return (
-    <div className=" w-1/2 h-3 bg-gray-300 mb-32 rounded-full">
+    <div className=" w-1/2 h-3 bg-gray-300 lg:mb-32 mb-10 rounded-full">
       <div
         className="progress h-full bg-sky-600 rounded-full transition-all duration-300"
         style={{ width: `${progress}%` }}
@@ -42,7 +43,10 @@ const ListeningTest = () => {
   const waveformRef = useRef(null);
   const wavesurfer = useRef(null);
 
-  const supabase = createClient('https://qlotvqlvudryzotpthbe.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFsb3R2cWx2dWRyeXpvdHB0aGJlIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTMzMTQyNjMsImV4cCI6MjAwODg5MDI2M30.vWxKAdJ1rYr1j3WTT5i4SyNIPlEWKDnvwIcVYpcQMcQ')
+  const supabase = createClient(
+    "https://qlotvqlvudryzotpthbe.supabase.co",
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFsb3R2cWx2dWRyeXpvdHB0aGJlIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTMzMTQyNjMsImV4cCI6MjAwODg5MDI2M30.vWxKAdJ1rYr1j3WTT5i4SyNIPlEWKDnvwIcVYpcQMcQ"
+  );
 
   useEffect(() => {
     // Fetch the list of audio files from the folder
@@ -111,7 +115,7 @@ const ListeningTest = () => {
     return Math.random().toString(36).substr(2, 10);
   };
 
-    const userID = generateRandomUserId();
+  const userID = generateRandomUserId();
 
   const handleNextClick = async () => {
     // Record the current ratings for the current clip
@@ -122,8 +126,6 @@ const ListeningTest = () => {
       rhythmic: tonalRating,
       harmonic: harmonicRating,
       overall: totalRating,
-      
-      
     };
 
     setAnswers((prevAnswers) => [...prevAnswers, answerData]);
@@ -136,22 +138,22 @@ const ListeningTest = () => {
       setTotalRating(1);
     } else {
       // User has completed all clips, navigate to thank you page
-      console.log(answers)
+      console.log(answers);
       // answers.forEach((answer) => sendresults(answer))
-      sendresultsall(answers)
+      sendresultsall(answers);
       navigate("/bream_listen/thankyou");
     }
   };
 
   const sendresults = async (answer) => {
-      const {error} = await supabase.from('answers').insert(answer)
-      console.log(error)
-  }
+    const { error } = await supabase.from("answers").insert(answer);
+    console.log(error);
+  };
 
   const sendresultsall = async (answers) => {
-    const {error} = await supabase.from('answers').insert(answers)
-    console.log(error)
-}
+    const { error } = await supabase.from("answers").insert(answers);
+    console.log(error);
+  };
 
   const handlePrevClick = () => {
     // Move to the previous clip
@@ -169,25 +171,31 @@ const ListeningTest = () => {
     }
   };
 
-
   return (
-    <div className="bg-white h-screen flex flex-col justify-center items-center py-10 px-52 font-roboto">
+    <div className="bg-white flex flex-col justify-center items-center py-10 lg:px-52 font-roboto">
       <h1 className="text-4xl font-bold text-black mb-10">Listening Test</h1>
-      <p className=" mb-32">Instructions here</p>
+      <p className=" lg:mb-16 mb-12 w-3/4 lg:text-base text-justify text-sm">
+        Please listen to this audio sample and pay attention to the bassline.
+        Then, rate the bassline on its harmonic, rhythmic, and overall
+        "appropriateness" with regards to the audio. Once you're done, click "next" to proceed. Don't worry, you can come back and modify your answers later on by clicking "prev" 😺
+      </p>
       <ProgressBar
         currentClipIndex={currentClipIndex}
         totalClips={audioClips.length}
       />
 
       {/* Audio Player for the Current Clip */}
-      <div ref={waveformRef} className="w-2/3 flex flex-col space-y-6" />
+      <div
+        ref={waveformRef}
+        className="lg:w-2/3 w-2/3 flex flex-col lg:space-y-6 lg:mb-0 mb-12"
+      />
 
       {/* Sliders */}
-      <div className="flex flex-row items-center justify-evenly space-x-32 mt-20 w-1/2">
-        <div className="slider-container">
+      <div className="flex lg:flex-row flex-col items-center lg:justify-evenly space-y-6 lg:space-x-32 lg:mt-20  lg:w-[60%] w-full">
+        <div className="flex flex-col items-center mb-2 w-2/3 lg:w-1/2">
           <input
             type="range"
-            className="rating-slider h-2 mb-6 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"
+            className="w-full h-2 mb-6 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"
             min="1"
             max="5"
             value={tonalRating}
@@ -196,10 +204,10 @@ const ListeningTest = () => {
 
           <label>Rhythmic Rating: {tonalRating}</label>
         </div>
-        <div className="slider-container">
+        <div className="flex flex-col items-center mb-2 w-2/3 lg:w-1/2">
           <input
             type="range"
-            className="rating-slider h-2 mb-6 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"
+            className="w-full h-2 mb-6 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"
             min="1"
             max="5"
             value={harmonicRating}
@@ -207,10 +215,10 @@ const ListeningTest = () => {
           />
           <label>Harmonic Rating: {harmonicRating}</label>
         </div>
-        <div className="slider-container">
+        <div className="flex flex-col items-center mb-2 w-2/3 lg:w-1/2">
           <input
             type="range"
-            className="rating-slider h-2 mb-6 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"
+            className="w-full h-2 mb-6 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"
             min="1"
             max="5"
             value={totalRating}
@@ -225,17 +233,16 @@ const ListeningTest = () => {
         <button
           onClick={handlePrevClick}
           disabled={currentClipIndex === 0}
-          className={`button prev-button mt-8 px-6 py-2 bg-pink-500 hover:bg-pink-700 transition-all duration-75 active:scale-95 active:bg-pink-300  shadow-lg hover:shadow-md shadow-gray-300 hover:shadow-gray-700 text-white text-xl font-bold rounded-full ${
-            currentClipIndex === 0
-              ? "opacity-50 cursor-not-allowed"
-              : ""
+          className={`button prev-button flex flex-row  mt-8 px-6 py-2 bg-pink-500 hover:bg-pink-700 transition-all duration-75 active:scale-95 active:bg-pink-300  shadow-lg hover:shadow-md shadow-gray-300 hover:shadow-gray-700 text-white text-xl font-bold rounded-full ${
+            currentClipIndex === 0 ? "opacity-50 cursor-not-allowed" : ""
           }`}
         >
-          PREVIOUS
+          <AiFillFastBackward size={26} className="mr-6"></AiFillFastBackward>
+          <p>PREV</p>
         </button>
         <button
           onClick={handleNextClick}
-          className={`mt-8 px-6 py-2 bg-blue-500 hover:bg-blue-700 shadow-lg hover:shadow-md transition-all active:scale-95 active:bg-blue-300 duration-75 shadow-gray-300 hover:shadow-gray-700 text-white text-xl font-bold rounded-full ${
+          className={`mt-8 px-6 py-2 bg-blue-500 flex flex-row justify-evenly hover:bg-blue-700 shadow-lg hover:shadow-md transition-all active:scale-95 active:bg-blue-300 duration-75 shadow-gray-300 hover:shadow-gray-700 text-white text-xl font-bold rounded-full ${
             tonalRating === 0 || harmonicRating === 0 || totalRating === 0
               ? "opacity-50 cursor-not-allowed"
               : ""
@@ -244,7 +251,8 @@ const ListeningTest = () => {
             tonalRating === 0 || harmonicRating === 0 || totalRating === 0
           }
         >
-          NEXT
+          <p>NEXT</p>
+          <AiFillFastForward size={26} className="ml-6"></AiFillFastForward>
         </button>
       </div>
     </div>
